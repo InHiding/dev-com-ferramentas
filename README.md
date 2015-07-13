@@ -1,7 +1,7 @@
-Lidando com o Legado
-====================
+Desenvolvimento apoiado por ferramentas
+=======================================
 
-Algumas abordagens de como lidar com sistemas e código legado, baseadas em apresentações sobre
-tema na QconSP 2015.
+Como o uso de ferramentas no apoio do desenvolvimento pode melhorar a qualidade de seu software e te poupar de algum sofrimento.
 
-[Apresentação](http://inhiding.github.io/lidando-com-legado)
+[Apresentação](http://inhiding.github.io/dev-com-ferramentas)
+
