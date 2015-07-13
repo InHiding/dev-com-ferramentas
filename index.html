@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1024" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Desenvolvimento apoiado por ferramentas</title>
+  <meta name="description" content="como o uso de ferramentas pode melhorar a qualidade de seu software e te poupar de algum sofrimento" />
+  <meta name="author" content="Giuliano Melo" />
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+  <link href="css/impress-demo.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+  <div id="main"></div>
+  <div class="fallback-message">
+    <p>Seu browser <b>não suporta algumas funcionalidades necessárias para visualizar essa apresentação.</b> deste modo, será apresentada uma versão simplificada da mesma.</p>
+    <p>Para uma melhor experiência por favor use versões atuais dos seguintes browsers: <b>Chrome</b>, <b>Safari</b> ou <b>Firefox</b></p>
+  </div>
+  <div id="impress">
+    <div id="title" class="step" data-x="0" data-y="0" data-z="-50">
+      <span class="try">Desenvolvimento apoiado por</span>
+      <h1>Ferramentas</h1>
+      <span class="footnote">melhorando a qualidade de sistemas sem tanto sofrimento</span>
+    </div>
+    <div id="its" class="step" data-x="450" data-y="600" data-z="-100">
+      <p>Uso de ferramentas no processo de desenvolvimento, seja de sistemas legados ou novos pode garantir não só melhores resultados, como poupar o desenvolvedor de muito sofrimento.</p>
+    </div>
+    <div class="step" data-x="650" data-y="1200" data-z="-150">
+      <p>Ferramentas podem ser usadas para:</p>
+      <ul class="bulleted">
+        <li>Encontrar duplicidades de código</li>
+        <li>Garantir o uso de boas práticas</li>
+        <li>Procurar falhas de segurança</li>
+        <li>Encontrar gargalos ou problemas de performance</li>
+      </ul>
+    </div>
+    <div id="tiny" class="step" data-x="1000" data-y="1800" data-z="-200">
+      <p><strong>Metric Fu</strong></p>
+      <p><em>Refatorando o domínio de mídias</em></p>
+    </div>
+    <div class="step" data-x="1200" data-y="2400" data-z="-250">
+      <p>conjunto de ferramentas com foco em extrair métricas do código, tais como, complexidade, duplicidade ou similaridades, <em>code smell</em>, qualidade geral do código, cobertura de testes, etc...</p>
+    </div>
+    <div class="step" data-x="1400" data-y="3000" data-z="-300">
+      <p>Com tantas métricas, é preciso foco para não se perder.</p>
+      <p>Na refatoração de mídias, a métrica escolhida foi a de similaridades de código.</p>
+    </div>
+    <div class="step" data-x="1600" data-y="3800" data-z="-400">
+      <img src="medias_flay_before.png">
+    </div>
+    <div class="step" data-x="1800" data-y="4700" data-z="-450">
+      <img src="medias_flay_after.png">
+    </div>
+    <div class="step" data-x="2000" data-y="5500" data-z="-500">
+      <p>Mesmo focando em uma só metrica, a melhoria acaba se refletindo em outras.</p>
+    </div>
+    <div class="step" data-x="2200" data-y="0" data-z="50">
+      <p><strong>Brakeman</strong></p>
+      <p><em>Preocupação com segurança desde o início</em></p>
+    </div>
+    <div class="step" data-x="2400" data-y="600" data-z="100">
+      <p>É um <em>scanner</em> de vulnerabilidades para aplicações rails. Ele analisa estaticamente o código em busca de várias vulnerabilidades conhecidas.</p>
+      <p>É atualizado com frequência, então é importante mantê-lo nas versão mais recente possível.</p>
+    </div>
+    <div class="step" data-x="2600" data-y="1200" data-z="150">
+      <p>Em nossos pipelines foi adicionado no primeiro passo como um elementro blocante.</p>
+      <p>Falhas de segurança apontadas <strong>param</strong> o pipeline.</p>
+    </div>
+    <div class="step" data-x="2800" data-y="1800" data-z="200">
+      <img src="medias_brakeman.png">
+    </div>
+    <div class="step" data-x="3000" data-y="2400" data-z="250">
+      <img src="editorial_brakeman.png">
+    </div>
+    <div class="step" data-x="3200" data-y="3000" data-z="300">
+      <p>Detectar vulnerabilidades antes evita eventuais bugs em produção, melhora a qualidade do código e libera tempo para o time focar em melhorias técnicas ou novas funcionalidades</p>
+    </div>
+    <div class="step" data-x="4400" data-y="0" data-z="-50">
+      <p><strong>I18n Tasks</strong></p>
+      <p><em>Gerenciando sem sofrimento internacionalização</em></p>
+    </div>
+    <div class="step" data-x="4600" data-y="600" data-z="-100">
+      <p>Conjunto de comandos para gerenciar traduções e localização de aplicações Rails. Ajuda a detectar internacionalização não usada ou sem tradução.</p>
+    </div>
+    <div class="step" data-x="6600" data-y="0" data-z="50">
+      <p><strong>Instrumentando o código</strong></p>
+      <p><em>Coletando métricas para ajudar na resolução de problemas.</em></p>
+    </div>
+    <div class="step" data-x="6800" data-y="600" data-z="100">
+      <p>Definir uma estratégia e uma marcação padronizada. Em nosso caso:</p>
+      <ul class="bulleted">
+        <li>Syslog com logs centralizados</li>
+        <li>Benchmark do Ruby para realizar medições</li>
+        <li>Padrão de tags para marcar métricas no log</li>
+      </ul>
+    </div>
+    <div class="step" data-x="7000" data-y="1300" data-z="150">
+      <p><strong>Ruby Benchmark</strong></p>
+      <p><em>modulo do Ruby que implementa diversas maneiras de medir seu código(<em>benchmarking</em>)</em>
+      </p>
+    </div>
+    <div class="step" data-x="7200" data-y="2100" data-z="200">
+      <p class="space-top">
+        <code>bm = Benchmark.measure { BigMath.PI(10_000) }</code>
+        <code>puts bm</code>
+      </p>
+      <p class="space-top">
+        <code><p><kbd> ==> 0.310000   0.040000   0.350000 (  0.339958)</kbd></p></code>
+      </p>
+      <p class="space-top"><img src="benchmark.png"></p>
+    </div>
+    <div class="step" data-x="7400" data-y="2800" data-z="250">
+      <p>Padronizar tags no log, com o intuito de facilitar no processamento.</p>
+      <p>measure.[module].[measure]</p>
+      <p>
+        <code>MONGODB (0.9ms) media_domain_development['imagens'].find({:marca=>"Alexandria", :status=>"disponivel", :$text=>{"$search"=>"dilma"}}).limit(15).sort([["updated_at", -1]])</code>
+        <code>[DEBUG] [c8dfaeae-17dd-4cb7-8430-cbc844cee308] [127.0.0.1] measure.search.total_time: 56.956 ms</code>
+      </p>
+    </div>
+    <div class="step" data-x="7600" data-y="3600" data-z="300">
+      <p>Identificar possíveis pontos de problema e criar uma estratégia de monitoramento.</p>
+    </div>
+    <div class="step" data-x="7800" data-y="4500" data-z="350">
+      <img src="midias_prod_graph.png">
+    </div>
+    <div class="step" data-x="8000" data-y="5300" data-z="400">
+      <img src="midias_prod_list1.png">
+    </div>
+    <div class="step" data-x="8200" data-y="6100" data-z="450">
+      <img src="midias_prod_list2.png">
+    </div>
+    <div class="step" data-x="8400" data-y="6900" data-z="500">
+      <ul class="bulleted">
+        <li>Problema: recursos dependentes de transformações tiveram piora significativa no tempo de resposta</li>
+        <li>Hipótese: latência no acesso via rede ao media server para buscar lista de transformações causava atraso na resposta dos <em>requests</em>.</li>
+        <li>Estratégia: medir os acessos ao media server e comparar com o tempo total dos <em>requests</em></li>
+      </ul>
+    </div>
+    <div class="step" data-x="8600" data-y="7600" data-z="550">
+      <p>
+        <small>
+        <code>[INFO] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1] Started GET "/data_entry/imagens/557b3e4f84cb9a2732000045/edit" for 127.0.0.1 at 2015-07-12 21:23:32 -0300</code>
+        <code>[INFO] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1] Processing by ImagensController#edit as HTML</code>
+        <code>[INFO] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1]   Parameters: {"id"=>"557b3e4f84cb9a2732000045"}</code>
+        <code>[INFO] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1] <strong>measure.transf.Alexandria.total_time: 12093.063 ms</strong></code>
+        <code>[INFO] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1] <strong>measure.transf.Sistema.total_time: 1585.423 ms</strong></code>
+        <code>[INFO] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1] <strong>measure.transf.Alexandria.total_time: 11473.901 ms</strong></code>
+        <code>[DEBUG] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1] MONGODB (1.8ms) media_domain_development['imagens'].find({:_id=>BSON::ObjectId('557b3e4f84cb9a2732000045')}).limit(-1)</code>
+        <code>[INFO] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1]   Rendered shared/_editorias.html.erb (9.6ms)</code>
+        <code>[INFO] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1]   Rendered shared/_rotulos_controlados.html.erb (1.2ms)</code>
+        <code>[INFO] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1]   Rendered shared/_form_extras_impresso.html.erb (4.3ms)</code>
+        <code>[DEBUG] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1] MONGODB (0.8ms) media_domain_development['sessions'].find({:_id=>"9bGL8oWWPMIuzEOOg0NxkYO-rLw"}).limit(-1)</code>
+        <code>[INFO] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1]   Rendered imagens/_form.html.erb (137.1ms)</code>
+        <code>[INFO] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1]   Rendered imagens/edit.html.erb within layouts/application (174.8ms)</code>
+        <code>[INFO] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1] Caching Console's output. Doing it on a separate process...</code>
+        <code>[INFO] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1] Caching Console's output. Doing it on a separate process...</code>
+        <code>[INFO] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1]   Rendered shared/_flash_message.html.erb (0.9ms)</code>
+        <code>[INFO] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1] <strong>measure.transf.Alexandria.total_time: 12317.929 ms</strong></code>
+        <code>[INFO] [667d7819-5b5b-461f-96d9-7ce771a64c3c] [127.0.0.1] Completed 200 OK in <strong>38068ms</strong> (Views: 298.9ms)</code>
+      </small>
+      </p>
+    </div>
+    <div class="step" data-x="8800" data-y="8400" data-z="600">
+      <p>
+        <small>
+        <code>[INFO] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1] Started GET "/data_entry/imagens/557b3e4f84cb9a2732000045/edit" for 127.0.0.1 at 2015-07-12 21:37:12 -0300</code>
+        <code>[INFO] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1] Processing by ImagensController#edit as HTML</code>
+        <code>[INFO] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1]   Parameters: {"id"=>"557b3e4f84cb9a2732000045"}</code>
+        <code>[INFO] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1] <strong>measure.transf.Alexandria.total_time: 14.262 ms</strong></code>
+        <code>[INFO] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1] <strong>measure.transf.Sistema.total_time: 2.129 ms</strong></code>
+        <code>[INFO] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1] <strong>measure.transf.Alexandria.total_time: 0.091 ms</strong></code>
+        <code>[DEBUG] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1] MONGODB (1.5ms) media_domain_development['imagens'].find({:_id=>BSON::ObjectId('557b3e4f84cb9a2732000045')}).limit(-1)</code>
+        <code>[INFO] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1]   Rendered shared/_editorias.html.erb (11.7ms)</code>
+        <code>[INFO] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1]   Rendered shared/_rotulos_controlados.html.erb (1.2ms)</code>
+        <code>[INFO] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1]   Rendered shared/_form_extras_impresso.html.erb (10.0ms)</code>
+        <code>[DEBUG] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1] MONGODB (0.7ms) media_domain_development['sessions'].find({:_id=>"9bGL8oWWPMIuzEOOg0NxkYO-rLw"}).limit(-1)</code>
+        <code>[INFO] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1]   Rendered imagens/_form.html.erb (216.7ms)</code>
+        <code>[INFO] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1]   Rendered imagens/edit.html.erb within layouts/application (296.2ms)</code>
+        <code>[INFO] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1] Caching Console's output. Doing it on a separate process...</code>
+        <code>[INFO] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1] Caching Console's output. Doing it on a separate process...</code>
+        <code>[INFO] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1]   Rendered shared/_flash_message.html.erb (0.8ms)</code>
+        <code>[INFO] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1] <strong>measure.transf.Alexandria.total_time: 0.061 ms</strong></code>
+        <code>[INFO] [7012af9e-1477-462f-99b0-a04f226838eb] [127.0.0.1] Completed 200 OK in <strong>852ms</strong> (Views: 484.3ms)</code>
+      </small>
+      </p>
+    </div>
+    <div class="step" data-x="9000" data-y="0" data-z="-600">
+      <p>O uso de ferramentas para apioar o desenvolvimento, não só facilita a vida do desenvolvedor</p>
+      <ul class="bulleted">
+      <li>diminui incidência erros</li>
+      <li>melhora qualidade do código</li>
+      <li>aumenta a velocidade de entrega</li>
+      <li>foca o time na parte mais importante do trabalho. <strong>Entrega de valor ao cliente.</strong></li>
+      </ul>
+    </div>
+    <div id="questions" class="step" data-x="0" data-y="-4000" data-rotate="90" data-scale="4">
+      <span class="try">Dúvidas, perguntas, observações???</span>
+      <span class="footnote">giuliano.melo@abril.com.br</span>
+      <span class="footnote">twitter: @inhiding</span>
+    </div>
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="20">
+    </div>
+  </div>
+  <div class="hint">
+    <p>Use a barra de espaços para passar para o próximo slide.</p>
+  </div>
+  <script>
+  if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").innerHTML = "<p>Use as setas para direita ou esquerda para navegar</p>";
+  }
+  </script>
+  <script src="js/impress.js"></script>
+  <script>
+  impress().init();
+  </script>
+</body>
+
+</html>
